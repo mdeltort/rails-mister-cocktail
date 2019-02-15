@@ -1,9 +1,8 @@
-<h1> List of cocktails</h1>
+<h1>Chico Cocktails:</h1>
 
-<ul>
-<% @cocktails.each do |cocktail|  %>
-<li> <%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
- <% end %>
-</ul>
-
- <%= link_to "Create a new cocktail!",new_cocktail_path, class: "btn btn-primary" %>
+<% @cocktails.each do |cocktail| %>
+  <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
+<br>
+<br>
+<% end %>
+<i class="fas fa-plus"><%= link_to "Add a new cocktail", new_cocktail_path %></i>
